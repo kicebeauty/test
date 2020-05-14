@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIV计算器外观模拟</title>
+    <title>DIV计算器外观模拟（按钮）</title>
 </head>
 <style>
     .outer{
         border: solid 2px red;
         border-radius: 10px;
         width: 410px;
-        height: 500px;
+        height: 512px;
         background-color: aqua;
         padding: 5px 5px 5px 5px;
+        margin: auto;
     }
     .divbar{
-        border: solid 2px black;
+        border: solid 2px bisque;
         width: 400px;
         height: 30px;
         margin: auto;
         border-radius: 10px;
     }
     .divscreen{
-        border: solid 2px black;
+        border: solid 2px lightcoral;
         width: 400px;
         height: 60px;
         margin: auto;
@@ -30,37 +31,7 @@
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    .divbutton1{
-        float: left;
-        border-radius: 10px;
-        font-size: 70px;
-        margin-top: 12px;
-        margin-left: 18px;
-        width: 80px;
-        background-color: aquamarine;
-        text-align: center;
-    }
-    .divbutton2{
-        float: left;
-        border-radius: 10px;
-        font-size: 70px;
-        margin-top: 12px;
-        margin-left: 18px;
-        width: 80px;
-        background-color: aquamarine;
-        text-align: center;
-    }
-    .divbutton3{
-        float: left;
-        border-radius: 10px;
-        font-size: 70px;
-        margin-top: 12px;
-        margin-left: 18px;
-        width: 80px;
-        background-color: aquamarine;
-        text-align: center;
-    }
-    .divbutton4{
+    .divbutton{
         float: left;
         border-radius: 10px;
         font-size: 70px;
@@ -117,32 +88,32 @@
         </div>
 
         <div class="divscreen">
-            <div><input type="text" name="screen" id="scrsty"></div>
+            <div><input type="text" name="screen" id="scrsty" maxlength="15"></div>
         </div>
 
         <div>
-            <div><button class="divbutton1" style="font-size: 45px; height: 84px; font-family: 微软雅黑;">AC</button></div>
-            <div><button class="divbutton1" style="font-size: 40px; height: 84px; font-family: 微软雅黑;">+/-</button></div>
-            <div><button class="divbutton1">%</button></div>
-            <div><button class="divbutton1">÷</button></div>
+            <div><button class="divbutton" style="font-size: 45px; height: 84px; font-family: 微软雅黑;">AC</button></div>
+            <div><button class="divbutton" style="font-size: 40px; height: 84px; font-family: 微软雅黑;">+/-</button></div>
+            <div><button class="divbutton">%</button></div>
+            <div><button class="divbutton">÷</button></div>
         </div>
         <div>
-            <div><button class="divbutton2">7</button></div>
-            <div><button class="divbutton2">8</button></div>
-            <div><button class="divbutton2">9</button></div>
-            <div><button class="divbutton2">*</button></div>
+            <div><button class="divbutton">7</button></div>
+            <div><button class="divbutton">8</button></div>
+            <div><button class="divbutton">9</button></div>
+            <div><button class="divbutton">*</button></div>
         </div>
         <div>
-            <div><button class="divbutton3">4</button></div>
-            <div><button class="divbutton3">5</button></div>
-            <div><button class="divbutton3">6</button></div>
-            <div><button class="divbutton3">-</button></div>
+            <div><button class="divbutton">4</button></div>
+            <div><button class="divbutton">5</button></div>
+            <div><button class="divbutton">6</button></div>
+            <div><button class="divbutton">-</button></div>
         </div>
         <div>
-            <div><button class="divbutton4">1</button></div>
-            <div><button class="divbutton4">2</button></div>
-            <div><button class="divbutton4">3</button></div>
-            <div><button class="divbutton4">=</button></div>
+            <div><button class="divbutton">1</button></div>
+            <div><button class="divbutton">2</button></div>
+            <div><button class="divbutton">3</button></div>
+            <div><button class="divbutton">=</button></div>
         </div>
     </div>
 </body>
