@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS幂的运算</title>
+    <script>
+        // 采用函数方式进行幂的运算
+        var base = window.prompt('请输入底数：')
+        var po = window.prompt('请输入幂：')
+        // 当幂是负数时，采用分数方式打印
+        if (po >= 0){
+            document.write('运算结果是 ： ' + pow(base,po) );
+        }else{
+            document.write('运算结果是 ： 1 / ' + pow(base,po) )
+        }
+
+        //幂有正数和负数的区分 
+        function pow(x , y){
+            var result = 1;
+            // 正数的时候
+            if (y >= 0){
+                for (var i = 0; i < y; i++){
+                    result *= x;
+                }
+            }
+            // 负数的时候
+            else{
+                for (var i = 0; i < (0-y); i++){
+                    result *= x;
+                }
+                // 若打印小数，需使用下一句
+                // result = 1 / result
+            }
+            // 返回运算结果
+            return result;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
