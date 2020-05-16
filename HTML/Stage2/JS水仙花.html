@@ -4,8 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS水仙花</title>
+    <!-- 计算三位整数（ 100~999）的水仙花数-->
+    <!-- 水仙花数：每一位数字的立方相加等于该数自己 -->
     <script>
-        
+        //主代码
+        var max = window.prompt('请输入任意大于1000的数（最大6个9，防止计算机卡死）：')
+        if (max <= 999999){
+            printnum(max);
+        }else{
+            window.alert('请按要求输入数字，仅支持6位数以内，请重新输入');
+            max = window.prompt('注意，最后一次机会！')
+            printnum(max);
+        }
+
+    //以下为函数代码
+
+    //定义一个打印函数
+    function printnum(x){
+        if (x <= 999999){
+            for (let i = 100; i < x; i++){
+                if (calc(i) === i){
+                    document.write('水仙花数有：' + i + '<br>');
+                }
+            }
+        }else window.alert('输入无效，系统已崩溃！请刷新重试......');
+    }
+    //定义一个计算水仙花数的函数
+        function calc(x){
+            let str = new String(x); //关键！！！将数字转换为字符串，以方便取每位数的值
+            let num = new Array();
+            let result = 0; //初始化result
+            for (let i in str){
+                num.push(str.charAt(i)); //将数字x中每个数，单独赋值给num数组的每个元素
+            }
+            y = num.length; //y赋值为x的位数
+            for (let i = 0; i < y; i++){
+                result += pow(parseInt(num[i]),y) //计算每位的立方和
+            }
+            return result;
+        }
+        // 定义一个三次方计算函数
+        function pow(x , y){
+            let result = 1;
+            // 正数的时候
+            if (y >= 0){
+                for (let i = 0; i < y; i++){
+                    result *= x;
+                }
+            }
+            // 负数的时候
+            else{
+                for (let i = 0; i > y; i--){
+                    result *= x;
+                }
+                // 若打印小数，需使用下一句
+                result = 1 / result
+            }
+            // 返回运算结果
+            return result;
+        }
     </script>
 </head>
 <body>

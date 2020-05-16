@@ -7,7 +7,7 @@
     <script>
         // 采用函数方式进行幂的运算
         var base = window.prompt('请输入底数：')
-        var po = window.prompt('请输入幂：')
+        var po = window.prompt('请输入指数：')
         // 当幂是负数时，采用分数方式打印
         if (po >= 0){
             document.write('运算结果是 ： ' + pow(base,po) );
@@ -26,7 +26,7 @@
             }
             // 负数的时候
             else{
-                for (var i = 0; i < (0-y); i++){
+                for (var i = 0; i > y; i--){
                     result *= x;
                 }
                 // 若打印小数，需使用下一句
